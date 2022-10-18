@@ -4,6 +4,7 @@ using System.Data;
 using System.Data.Common;
 using System.Data.OleDb;
 using System.Data.SqlClient;
+using System.Runtime.Versioning;
 
 namespace TemplateUpload.Controllers
 {
@@ -12,6 +13,7 @@ namespace TemplateUpload.Controllers
     public class TemplateUploadController : ControllerBase
     {
         [HttpPost]
+        //[SupportedOSPlatform("windows")]
         public void UploadTemplate()
         {
             string path = @"C:\Projects\TemplateUpload\TemplateUpload\Excel Files\Student_Details.xlsx";
